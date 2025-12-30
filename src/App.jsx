@@ -3811,10 +3811,15 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
         }
 
         @media (max-width: 768px) {
+          .site-title {
+            font-size: 1rem;
+            letter-spacing: 1px;
+          }
+
           .main-header {
             flex-direction: column;
-            gap: 1rem;
-            padding: 1.5rem;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
           }
 
           .period-nav {
@@ -3830,33 +3835,39 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
           }
 
           .back-button {
-            top: 5rem;
-            left: 1.5rem;
-            padding: 0.6rem 1rem;
-            font-size: 0.85rem;
+            top: 3.5rem;
+            left: 1rem;
+            padding: 0.5rem 0.9rem;
+            font-size: 0.8rem;
           }
 
           .period-container, .event-container {
-            padding: 0 2rem;
+            padding: 0 1rem;
             padding-bottom: 9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 180px);
           }
 
           .period-card, .event-card {
-            padding: 1.5rem;
-            max-height: 90vh;
+            padding: 1.2rem;
+            max-height: calc(100vh - 200px);
+            width: 100%;
+            max-width: 500px;
           }
 
           .period-thumbnail, .event-thumbnail {
-            height: 180px;
-            margin: 0.8rem 0 1.2rem 0;
+            height: 150px;
+            margin: 0.6rem 0 1rem 0;
           }
 
           .period-number {
-            font-size: 2.5rem;
+            font-size: 2rem;
           }
 
           .period-title, .event-title {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
           }
 
           .period-years, .event-date {
@@ -3934,12 +3945,28 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
           }
 
           .credits {
-            font-size: 0.55rem;
-            line-height: 1.3;
+            font-size: 0.45rem;
+            line-height: 1.2;
+            padding: 5px 8px;
+            top: 8px;
+            right: 8px;
+            max-width: 140px;
+          }
+
+          .credits-institution {
+            font-size: 0.5rem;
+          }
+
+          .credits-faculty {
+            font-size: 0.45rem;
+          }
+
+          .credits-label {
+            font-size: 0.45rem;
           }
 
           .credits-creators div {
-            font-size: 0.5rem;
+            font-size: 0.4rem;
           }
         }
 
@@ -3996,16 +4023,18 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
     </div>
 
     {/* Créditos en la esquina inferior derecha */}
-    <div className="credits">
-      <div className="credits-institution">Universidad de La Habana</div>
-      <div className="credits-faculty">Facultad de Turismo</div>
-      <div className="credits-creators">
-        <div className="credits-label">Creadores:</div>
-        <div>Hany Pimentel Collado</div>
-        <div>Jonathan Daniel Montesinos Rodríguez</div>
-        <div>Rony Martínez Tellería</div>
+    {!detailedEvent && (
+      <div className="credits">
+        <div className="credits-institution">Universidad de La Habana</div>
+        <div className="credits-faculty">Facultad de Turismo</div>
+        <div className="credits-creators">
+          <div className="credits-label">Creadores:</div>
+          <div>Hany Pimentel Collado</div>
+          <div>Jonathan Daniel Montesinos Rodríguez</div>
+          <div>Rony Martínez Tellería</div>
+        </div>
       </div>
-    </div>
+    )}
 
     {/* Modal de Hoteles Emblemáticos - Renderizado fuera del timeline-container */}
     {detailedEvent && detailedEvent.isSpecialCard && (
