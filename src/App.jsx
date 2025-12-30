@@ -3966,7 +3966,7 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
             font-size: 0.38rem;
             line-height: 1.15;
             padding: 4px 6px;
-            top: 6px;
+            top: 50px;
             right: 6px;
             max-width: 110px;
           }
