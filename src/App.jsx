@@ -3006,7 +3006,7 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
           
           <div className="story-container">
             <button className="story-close-btn" onClick={() => setDetailedEvent(null)}>
-              <X size={32} />
+              <X size={40} />
             </button>
             
             <div className="story-content">
@@ -3664,8 +3664,8 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
           position: fixed;
           top: 2rem;
           right: 2rem;
-          width: 50px;
-          height: 50px;
+          width: 60px;
+          height: 60px;
           background: rgba(0, 0, 0, 0.8);
           border: 1px solid rgba(255, 255, 255, 0.3);
           border-radius: 50%;
@@ -3812,14 +3812,16 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
 
         @media (max-width: 768px) {
           .site-title {
-            font-size: 1rem;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-align: left;
           }
 
           .main-header {
             flex-direction: column;
             gap: 0.5rem;
-            padding: 1rem 1.5rem;
+            padding: 0.8rem 1rem;
+            align-items: flex-start;
           }
 
           .period-nav {
@@ -3842,7 +3844,7 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
           }
 
           .period-container, .event-container {
-            padding: 0 1rem;
+            padding: 0 0.5rem;
             padding-bottom: 9rem;
             display: flex;
             align-items: center;
@@ -3851,23 +3853,23 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
           }
 
           .period-card, .event-card {
-            padding: 1.2rem;
-            max-height: calc(100vh - 200px);
-            width: 100%;
-            max-width: 500px;
+            padding: 1rem;
+            max-height: calc(100vh - 220px);
+            width: calc(100% - 120px);
+            max-width: 400px;
           }
 
           .period-thumbnail, .event-thumbnail {
-            height: 150px;
-            margin: 0.6rem 0 1rem 0;
+            height: 130px;
+            margin: 0.5rem 0 0.8rem 0;
           }
 
           .period-number {
-            font-size: 2rem;
+            font-size: 1.8rem;
           }
 
           .period-title, .event-title {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
           }
 
           .period-years, .event-date {
@@ -3945,28 +3947,37 @@ La hotelería habanera atraviesa actualmente su peor crisis desde 2003, con tasa
           }
 
           .credits {
-            font-size: 0.45rem;
-            line-height: 1.2;
-            padding: 5px 8px;
-            top: 8px;
-            right: 8px;
-            max-width: 140px;
+            font-size: 0.38rem;
+            line-height: 1.15;
+            padding: 4px 6px;
+            top: 6px;
+            right: 6px;
+            max-width: 110px;
           }
 
           .credits-institution {
-            font-size: 0.5rem;
+            font-size: 0.42rem;
+            margin-bottom: 1px;
           }
 
           .credits-faculty {
-            font-size: 0.45rem;
+            font-size: 0.38rem;
+            margin-bottom: 3px;
           }
 
           .credits-label {
-            font-size: 0.45rem;
+            font-size: 0.38rem;
+            margin-bottom: 1px;
+          }
+
+          .credits-creators {
+            margin-top: 3px;
+            padding-top: 3px;
           }
 
           .credits-creators div {
-            font-size: 0.4rem;
+            font-size: 0.35rem;
+            line-height: 1.2;
           }
         }
 
